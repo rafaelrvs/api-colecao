@@ -1,13 +1,10 @@
 require('dotenv').config();
 
-const app = require('./src/app');
+const app = require("./src/app.js")
 
-const PORT = process.env.PORT || 3333;
-const http = require('http');
+const PORT = 3333
 
-// Criação do servidor HTTP
-const server = http.createServer(app);
-
-server.listen(PORT, () => {
-    console.log(`Servidor de aplicação ligado na porta ${PORT}`);
-});
+app.listen(PORT,()=>{
+    console.log("Servidor de aplicação ligado na porta"+PORT);
+    
+})
